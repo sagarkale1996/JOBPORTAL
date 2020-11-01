@@ -1,0 +1,21 @@
+{% extends 'EmployeeApp/base.html' %}
+
+{% block content %}
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>LOCATION</th>
+        <th>TYPE</th>
+        <th>domain</th>
+    </tr>
+    <tr>
+        <td>{{object.id}}</td>
+        <td>{{object.name}}</td>
+        <td>{{object.loc}}</td>
+        <td>{{object.type}}</td>
+        <td>{{object.domain}}</td>
+    </tr>
+</table>
+{% endblock %}
+

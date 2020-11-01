@@ -1,0 +1,21 @@
+{% extends 'EmployeeApp/base.html' %}
+{% block title %}
+<table class="table table-striped">
+    <tr>
+        <th>COMPANY</th>
+        <th>DESIGNATION</th>
+        <th>CTC</th>
+        <th>LOCATION</th>
+        <th>EXPERIENCE</th>
+        <th>SKILLS</th>
+    </tr>
+    <tr>
+        <td>{{object.company}}</td>
+        <td>{{object.desg}}</td>
+        <td>{{object.ctc}}</td>
+        <td>{{object.loc}}</td>
+        <td>{{object.exp}}</td>
+        <td>{{object.skills}}</td>
+    </tr>
+</table>
+{% endblock %}

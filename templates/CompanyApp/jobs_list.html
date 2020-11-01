@@ -1,0 +1,36 @@
+{% extends 'EmployeeApp/base.html' %}
+
+{% block content %}
+
+<img src="/media/images/dog.jpg" class="d-block w-50" alt="....">
+<table class="table table-striped">
+    <tr>
+        <th>COMPANY</th>
+        <th>DESIGNATION</th>
+        <th>CTC</th>
+        <th>LOCATION</th>
+        <th>EXPEREIENCE</th>
+        <th>SKILLS</th>
+
+    </tr>
+        {% for j in Jbs %}
+            <tr>
+                <td><a href="{% url 'jdetail' j.id %}">{{j.company}}</a></td>
+                <td>{{j.desg}}</td>
+                <td>{{j.ctc}}</td>
+                <td>{{j.loc}}</td>
+                <td>{{j.exp}}</td>
+                <td>{{j.skills}}</td>
+                <td>
+                    <a href="{% url 'jupdate' j.id %}"><button>Update</button></a>
+                </td>
+
+                <td><button type="button"><a href="{% url 'deleteJ' j.id %}">Delete</a></button></td>
+
+
+            </tr>
+        {% endfor %}
+
+
+</table>
+{% endblock %}

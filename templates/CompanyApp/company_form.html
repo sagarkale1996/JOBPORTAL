@@ -1,0 +1,17 @@
+{% extends 'EmployeeApp/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title>NEW COMPANY</title>
+{% endblock %}
+</head>
+<body>
+{% block content %}
+    <form method="post" class="jumbotron" style="width:50">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Add Company">
+    </form>
+{% endblock %}
+
+</body>
+</html>

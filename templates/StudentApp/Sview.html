@@ -1,0 +1,31 @@
+{% extends 'EmployeeApp/base.html' %}
+
+{% block content %}
+<table class="table table-striped" border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ADDRESS</th>
+        <th>SCHOLARSHIP</th>
+        <th>IMG</th>
+    </tr>
+    {% for s in stu %}
+    <tr>
+        <td>{{s.Sid}}</td>
+        <td>{{s.Sname}}</td>
+        <td>{{s.Saddr}}</td>
+        <td>{{s.Sscholarship}}</td>
+        <td>{{s.Simg}}</td>
+
+           <td><a href="{% url 'SDelete' s.id %}"><button class="btn btn-danger">Delete</button></a></td>
+
+           <td><button type="button">
+                <a href="{% url 'Supdate' s.id %}">Update</a>
+            </button>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

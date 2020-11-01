@@ -1,0 +1,30 @@
+{% extends 'EmployeeApp/base.html' %}
+
+{% block content %}
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Location</th>
+        <th>NAME</th>
+
+    </tr>
+        {% for c in comp %}
+            <tr>
+                <td>{{c.id}}</td>
+                <td>{{c.loc}}</td>
+                <td><a href="{% url 'detail' c.id %}">{{c.name}}</a> </td>
+                <td>
+                    <a href="{% url 'update' c.id %}"><button>Update</button></a>
+                </td>
+
+                <td><button type="button"><a href="/Cmp/delete/{{c.id}}">Delete</a></button></td>
+
+
+            </tr>
+        {% endfor %}
+
+</table>
+{% endblock %}
+
+</body>
+</html>

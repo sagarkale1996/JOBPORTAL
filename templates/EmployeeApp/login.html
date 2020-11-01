@@ -1,0 +1,16 @@
+{% extends 'EmployeeApp/base.html' %}
+
+{% block content %}
+<form action="" method="post" style="width:300px;margin-left:450px" class="jumbotron">
+    {% csrf_token %}
+    <h3>Login Page</h3>
+    Enter Username:<br>
+    <input type="text" name="uname"><br>
+    Enter Password:<br>
+    <input type="password" name="pw"><br><br>
+    <input type="submit"><br><br>
+    {% for msg in messages %}
+     <h3 style="color:red;">{{msg}}</h3>
+    {% endfor %}
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'EmployeeApp/base.html' %}
+
+{% block content %}
+<div style="padding:40px;margin:40px;border:1px solid #ccc">
+    <h1> OFFICE </h1>
+    <form action=""  method="post" enctype="multipart/form-data" >
+    {% csrf_token %} {{form}}
+    <input type="submit" value="Upload">
+
+    </form>
+
+    {% for s in stu %}
+        {{s.Simg}}
+
+    {% endfor %}
+
+</div>
+{% endblock %}
