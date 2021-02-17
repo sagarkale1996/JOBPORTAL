@@ -21,4 +21,9 @@ class Employees(models.Model):
         return f'{self.ename}'
 
 
+def angel():
+    pass
+
+
+
 
