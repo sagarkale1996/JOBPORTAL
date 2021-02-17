@@ -24,6 +24,10 @@ class Employees(models.Model):
 def angel():
     pass
 
+def vinay():
+    pass
+
+
 
 
 
