@@ -27,6 +27,8 @@ def angel():
 def vinay():
     pass
 
+def corona():
+    pass
 
 
 
