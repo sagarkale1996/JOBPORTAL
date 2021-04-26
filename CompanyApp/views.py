@@ -3,6 +3,8 @@ from django.views.generic import ListView,CreateView,DetailView,UpdateView,Delet
 from .models import Company,Jobs
 # Create your views here.
 class Companylist(ListView):
+    print("heello")
+    print("Hey Wats Up")
     model = Company
     template_name = 'CompanyApp/base1.html'
 
